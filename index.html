@@ -1,2 +1,559 @@
-<h1>Combinatorial Minds</h1>
-<p>Mostrador index para pagina web del proyecto</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/logo.webp" type="image/x-icon">
+    <title>CLASIFICADO</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+    <div class="caja" id="monitor">
+        <div id="screen">
+            <div id="desktop">
+                <div id="accesos">
+                    <div class="archivo" id="arch_1">
+                        <img src="img/archivo.ico" alt="file.png">
+                        <p>comb_conc.txt</p>
+                    </div>
+                    <div class="archivo" id="arch_2">
+                        <img src="img/archivo.ico" alt="file.png">
+                        <p>utilidad.txt</p>
+                    </div>
+                    <div class="archivo" id="arch_3">
+                        <img src="img/archivo.ico" alt="file.png">
+                        <p>HistoriaClasica.txt</p>
+                    </div>
+                    <div class="archivo" id="arch_4">
+                        <img src="img/archivo.ico" alt="file.png">
+                        <p>HistoriaModerna.txt</p>
+                    </div>
+                    
+                    <div></div>
+
+                    <div class="archivo" id="arch_5">
+                        <img src="img/program.png" alt="program.png">
+                        <p>PrinAdit.exe</p>
+                    </div>
+                    <div class="archivo" id="arch_6">
+                        <img src="img/program.png" alt="program.png">
+                        <p>PrinMultip.exe</p>
+                    </div>
+                    <div class="archivo" id="arch_7">
+                        <img src="img/program.png" alt="program.png">
+                        <p>Variav.exe</p>
+                    </div>
+                    <div class="archivo" id="arch_8">
+                        <img src="img/program.png" alt="program.png">
+                        <p>Permut.exe</p>
+                    </div>
+
+                    <div></div>
+
+                    <div class="archivo" id="arch_9">
+                        <img src="img/program.png" alt="program.png">
+                        <p>Combin.exe</p>
+                    </div>
+                </div>
+
+                <div id="logotipo">
+                    <div class="logoimg">
+                        <img src="img/logo.webp" alt="Comb_Minds_Logo">
+                    </div>
+    
+                    <div class="logotxt">
+                        <p>Seleccione el Archivo a Consultar</p>
+                    </div>
+                </div>
+
+                <div class="popup_bg" id="PopUp_1">
+                    <div class="popup">
+                        <div class="popup_bar">
+                            <div class="title">
+                                <p>TextViewer: comb_conc.txt</p>
+                            </div>
+                            <div class="button" id="button_1">
+                                <img src="img/close.webp" alt="cerrar.img">
+                            </div>
+                        </div>
+                        <div class="popup_content">
+                            <div class="title">
+                                <h1>Analisis Combinatorio</h1>
+                            </div>
+                            <div class="text">
+                                <p>
+                                    El análisis combinatorio es una rama de las matemáticas que se ocupa de contar, 
+                                    organizar y agrupar elementos de un conjunto. Su objetivo es determinar cuántas 
+                                    maneras diferentes existen para seleccionar o arreglar estos elementos bajo ciertas 
+                                    condiciones. Los conceptos fundamentales incluyen permutaciones, que consideran el 
+                                    orden de los elementos, y combinaciones, que se centran en la selección sin importar 
+                                    el orden.
+                                </p>
+
+                                <p>
+                                    Esta disciplina es esencial en diversas áreas como la informática, la biología 
+                                    y la economía, ya que permite resolver problemas complejos de optimización y probabilidad. 
+                                    Además, el análisis combinatorio proporciona herramientas para entender patrones y 
+                                    estructuras en datos, lo que resulta crucial en la estadística moderna.
+                                </p>
+
+                                <p>Herramientas:</p>
+                                <ul>
+                                    <li>Principio Aditivo</li>
+                                    <p>
+                                        Se define un proceso, varias tareas[T] para el proceso
+                                        y varias formas de realizar el proceso[N]. Se usa si el proceso
+                                        requiere que se escoja solo una de las tareas para realizar.
+                                    </p>
+                                    <p>$$  \text{Distribución} = N_1 + N_2 + \ldots + N_r  $$</p>
+                                    
+                                    <li>Principio Multiplicativo</li>
+                                    <p>
+                                        Se define un proceso, varias tareas[T] para el proceso
+                                        y varias formas de realizar el proceso[N]. Se usa si el proceso
+                                        requiere que las tareas sean secuenciales. Una despues de otra.
+                                    </p>
+                                    <p>$$  \text{Distribución} = N_1 * N_2 * \ldots * N_r  $$</p>
+
+                                    <li>Permutaciones</li>
+                                    <p>
+                                        ¿Es el orden de los elementos importante? Entonces
+                                        se debe utilizar esta formula. Ten en cuenta que [n!] es
+                                        la cantidad de elementos y [r!] la cantidad de elementos que se toma en cuenta.
+                                    </p>
+                                    <p>$$ P(n, r) = \frac{n!}{(n-r)!} $$</p>
+
+                                    <li>Variaciones</li>
+                                    <p>
+                                        Al igual que en las permutaciones, en las variaciones el orden de los elementos 
+                                        sí importa. Sin embargo, tras cada selección, se descartan los elementos que ya 
+                                        han sido elegidos. Esto significa que no se pueden 
+                                        repetir los elementos en la misma variación.
+                                    </p>
+                                    <p>$$ V(n, r) = \frac{n!}{(n-r)!} $$</p>
+
+                                    <li>Combinaciones</li>
+                                    <p>
+                                        ¿El orden no importa? ¿Todos los elementos tienen la misma importancia?
+                                        Entonces la mejor formula para usar seria la de combinaciones.
+                                    </p>
+                                    <p>$$ C(n, r) = \frac{n!}{r!(n-r)!} $$</p>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup_bg" id="PopUp_2">
+                    <div class="popup">
+                        <div class="popup_bar">
+                            <div class="title">
+                                <p>TextViewer: utilidad.txt</p>
+                            </div>
+                            <div class="button" id="button_2">
+                                <img src="img/close.webp" alt="cerrar.img">
+                            </div>
+                        </div>
+                        <div class="popup_content">
+                            <div class="title">
+                                <h1>Utilidad del Analisis Combinatorio</h1>
+                            </div>
+                            <div class="text">
+                                <ul>
+                                    <li>Generacion de Claves</li>
+                                    <p>
+                                        El análisis combinatorio se utiliza para generar combinaciones seguras de contraseñas y 
+                                        claves. Por ejemplo, al crear una contraseña, se pueden considerar todas las permutaciones 
+                                        posibles de caracteres para garantizar que sea difícil de adivinar.
+                                    </p>
+
+                                    <li>Analisis de Seguridad</li>
+                                    <p>
+                                        Se emplea para evaluar la seguridad de algoritmos criptográficos mediante el conteo
+                                        de posibles combinaciones o permutaciones de claves. Por ejemplo, en el cifrado 
+                                        asimétrico, se utilizan números primos y combinaciones complejas para generar claves 
+                                        que son difíciles de romper.
+                                    </p>
+                                    
+                                    <li>Criptografia por Transposicion</li>
+                                    <p>
+                                        En métodos como la criptografía por transposición, el análisis combinatorio ayuda a 
+                                        entender cuántas formas diferentes se pueden reorganizar las letras de un mensaje. 
+                                        Aunque este método puede ser vulnerable con mensajes cortos, a medida que aumenta la 
+                                        longitud del mensaje, el número de combinaciones posibles crece exponencialmente, lo 
+                                        que dificulta su descifrado.
+                                    </p>
+
+                                    <li>Cifrado Polialfabetico</li>
+                                    <p>
+                                        En sistemas como la máquina Enigma, el análisis combinatorio es fundamental para 
+                                        calcular las posibles configuraciones iniciales y las permutaciones aplicadas a 
+                                        cada letra, lo que resulta en un número extremadamente alto de combinaciones posibles.
+                                    </p>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup_bg" id="PopUp_3">
+                    <div class="popup">
+                        <div class="popup_bar">
+                            <div class="title">
+                                <p>TextViewer: HistoriaClasica.txt</p>
+                            </div>
+                            <div class="button" id="button_3">
+                                <img src="img/close.webp" alt="cerrar.img">
+                            </div>
+                        </div>
+                        <div class="popup_content">
+                            <div class="title">
+                                <h1>Cifrado Clasico - Historia</h1>
+                            </div>
+                            <div class="text">
+                                <ul>
+                                    <li>3000 a.C. - Primeras formas de cifrado</li>
+                                    <p>
+                                        Los antiguos egipcios utilizaron jeroglíficos y símbolos para ocultar información, una de las primeras manifestaciones de la criptografía.
+                                    </p>
+
+                                    <li>600 a.C. - Escítala espartana</li>
+                                    <p>Dispositivo que consistía en un bastón alrededor del cual se enrollaba una cinta, permitiendo enviar mensajes secretos que solo podían leerse con el bastón adecuado.</p>
+
+                                    <li>200 a.C. - Cifrado César</li>
+                                    <p>Julio César implementó un sistema de sustitución donde cada letra se desplazaba un número fijo en el alfabeto, uno de los métodos más conocidos en la historia de la criptografía.</p>
+
+                                    <li>Siglo IX - Análisis de frecuencia</li>
+                                    <p>Al-Kindi desarrolló técnicas para romper cifrados mediante el análisis de patrones en los mensajes cifrados, sentando las bases del criptoanálisis moderno.</p>
+
+                                    <li>1465 - Cifrado polialfabético</li>
+                                    <p>Leon Battista Alberti introdujo un sistema que utilizaba múltiples alfabetos para codificar mensajes, aumentando significativamente la seguridad.</p>
+
+                                    <li>Primera Guerra Mundial - Criptoanálisis</li>
+                                    <p>
+                                        La interceptación y descifrado de comunicaciones enemigas demostraron el impacto crucial de la criptografía en conflictos bélicos, como el telegrama Zimmermann.
+                                    </p>
+
+                                    <li>Segunda Guerra Mundial - Máquina Enigma</li>
+                                    <p>La máquina Enigma utilizada por Alemania fue fundamental para las comunicaciones secretas; su desciframiento por Alan Turing cambió el curso de la guerra.</p>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup_bg" id="PopUp_4">
+                    <div class="popup">
+                        <div class="popup_bar">
+                            <div class="title">
+                                <p>TextViewer: HistoriaModerna.txt</p>
+                            </div>
+                            <div class="button" id="button_4">
+                                <img src="img/close.webp" alt="cerrar.img">
+                            </div>
+                        </div>
+                        <div class="popup_content">
+                            <div class="title">
+                                <h1>Cifrado Moderno - Historia</h1>
+                            </div>
+                            <div class="text">
+                                <ul>
+                                    <li>1948 - Teoría de Claude Shannon</li>
+                                    <p>Shannon publicó "A Communications Theory of Secrecy Systems", estableciendo las bases matemáticas para la criptografía moderna y el criptoanálisis.</p>
+
+                                    <li>1975 - DES (Data Encryption Standard)</li>
+                                    <p>IBM desarrolló DES como un estándar nacional para cifrado, marcando el inicio del uso generalizado de algoritmos criptográficos en el sector civil.</p>
+
+                                    <li>1976 - Criptografía asimétrica</li>
+                                    <p>Whitfield Diffie y Martin Hellman introdujeron la criptografía asimétrica, permitiendo el uso de claves públicas y privadas, fundamental para la seguridad en internet actual.</p>
+
+                                    <li>1991 - MD5 (Message-Digest Algorithm 5)</li>
+                                    <p>Introducción de MD5 como una función hash para verificar la integridad de archivos, aunque posteriormente se descubrieron vulnerabilidades significativas.</p>
+
+                                    <li>1993 - SHA-1 (Secure Hash Algorithm 1)</li>
+                                    <p>Desarrollado por la NSA, SHA-1 se convirtió en un estándar ampliamente utilizado hasta que se identificaron sus debilidades.</p>
+
+                                    <li>1997 - Vulnerabilidad del DES</li>
+                                    <p>Con el aumento del poder computacional, DES fue considerado inseguro debido a su corta longitud de clave (56 bits), lo que llevó a la búsqueda de métodos más robustos.</p>
+
+                                    <li>2000 - AES (Advanced Encryption Standard)</li>
+                                    <p>NIST adoptó AES como nuevo estándar para el cifrado simétrico tras un proceso riguroso, convirtiéndose en uno de los algoritmos más utilizados hoy en día.</p>
+
+                                    <li>2016 - Criptografía poscuántica</li>
+                                    <p>Con los avances en computación cuántica, NIST inició una convocatoria para desarrollar algoritmos resistentes a ataques cuánticos, marcando una nueva era en la seguridad criptográfica.</p>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup_bg" id="PopUp_5">
+                    <div class="popup">
+                        <div class="popup_bar">
+                            <div class="title">
+                                <p>ProgramPlay: PrinAdit.exe</p>
+                            </div>
+                            <div class="button" id="button_5">
+                                <img src="img/close.webp" alt="cerrar.img">
+                            </div>
+                        </div>
+                        <div class="popup_content">
+                            <div class="title">
+                                <h1>QUIZ TIME: ADITIVOS</h1>
+                            </div>
+                            <div class="text">
+                                <p>Una persona desea comprar una lavadora de ropa, para lo
+                                    cuál ha pensado que puede seleccionar de entre las marcas
+                                    Whirlpool, Easy y General Electric, cuando acude a hacer la
+                                    compra se encuentra que la lavadora de la marca W se
+                                    presenta en dos tipos de carga (8 u 11 Kg), en cuatro colores
+                                    diferentes y puede ser automática o semiautomática,
+                                    mientras que la lavadora de la marca E, se presenta en tres
+                                    tipos de carga (8, 11 o 15 Kg), en dos colores diferentes y
+                                    puede ser automática o semiautomática y la lavadora de la
+                                    marca GE, se presenta en un solo tipo de carga (11 Kg), dos
+                                    colores diferentes y solo hay semiautomática. <b>¿Cuántas
+                                    maneras tiene esta persona de comprar una lavadora?</b></p>
+                                <div class="options">
+                                    <div class="option"><p>a) 20</p></div>
+                                    <div class="option"><p>b) 36</p></div>
+                                    <div class="option" id="correcta"><p>c) 30</p></div>
+                                    <div class="option"><p>d) Ninguna de las Anteriores</p></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup_bg" id="PopUp_6">
+                    <div class="popup">
+                        <div class="popup_bar">
+                            <div class="title">
+                                <p>ProgramPlay: PrinMultip.exe</p>
+                            </div>
+                            <div class="button" id="button_6">
+                                <img src="img/close.webp" alt="cerrar.img">
+                            </div>
+                        </div>
+                        <div class="popup_content">
+                            <div class="title">
+                                <h1>QUIZ TIME: MULTIPLICATIVOS</h1>
+                            </div>
+                            <div class="text">
+                                <p>El lenguaje de programación C/C++ maneja nombres de
+                                    identificadores de hasta 32 caracteres. Como regla del
+                                    lenguaje el primer carácter debe ser una letra, los
+                                    siguientes pueden ser letras, dígitos o el carácter de
+                                    sub-guión.</p>
+                                <p><b>¿Cuántos identificadores de 8 caracteres
+                                    serán posibles si se permiten repeticiones?</b></p>
+                                <div class="options">
+                                    <div class="option"><p>a) 1.09 x 10^10</span></div>
+                                    <div class="option"><p>b) 2.47</p></div>
+                                    <div class="option" id="correcta"><p>c) 2.47 x 10^12</p></div>
+                                    <div class="option"><p>d) Ninguna de las Anteriores</p></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup_bg" id="PopUp_7">
+                    <div class="popup">
+                        <div class="popup_bar">
+                            <div class="title">
+                                <p>ProgramPlay: Variav.exe</p>
+                            </div>
+                            <div class="button" id="button_7">
+                                <img src="img/close.webp" alt="cerrar.img">
+                            </div>
+                        </div>
+                        <div class="popup_content">
+                            <div class="title">
+                                <h1>QUIZ TIME: VARIACIONES</h1>
+                            </div>
+                            <div class="text">
+                                <p><b>¿Cuántas palabras de 3 letras distintas pueden formarse con las letras de la palabra MASTIL?</b></p>
+                                <div class="options">
+                                    <div class="option"><p>a) 16</p></div>
+                                    <div class="option"><p>b) 24</p></div>
+                                    <div class="option"><p>c) 6</p></div>
+                                    <div class="option" id="correcta"><p>d) Ninguna de las Anteriores</p></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup_bg" id="PopUp_8">
+                    <div class="popup">
+                        <div class="popup_bar">
+                            <div class="title">
+                                <p>ProgramPlay: Permut.exe</p>
+                            </div>
+                            <div class="button" id="button_8">
+                                <img src="img/close.webp" alt="cerrar.img">
+                            </div>
+                        </div>
+                        <div class="popup_content">
+                            <div class="title">
+                                <h1>QUIZ TIME: PERMUTACIONES</h1>
+                            </div>
+                            <div class="text">
+                                <p>En un experimento psicológico, una persona debe
+                                    acomodar en hilera un cuadrado, un cubo, un
+                                    círculo, un triángulo y un pentágono,
+                                </p>
+
+                                <p><b>¿cuántos acomodos diferentes son posibles?</b></p>
+
+                                <div class="options">
+                                    <div class="option" id="correcta"><p>a) 120</p></div>
+                                    <div class="option"><p>b) 720</p></div>
+                                    <div class="option"><p>c) 24</p></div>
+                                    <div class="option"><p>d) Ninguna de las Anteriores</p></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup_bg" id="PopUp_9">
+                    <div class="popup">
+                        <div class="popup_bar">
+                            <div class="title">
+                                <p>ProgramPlay: Combin.exe</p>
+                            </div>
+                            <div class="button" id="button_9">
+                                <img src="img/close.webp" alt="cerrar.img">
+                            </div>
+                        </div>
+                        <div class="popup_content">
+                            <div class="title">
+                                <h1>QUIZ TIME: COMBINACIONES</h1>
+                            </div>
+                            <div class="text">
+                                <p>En un juego de lotería se seleccionará 3 números en
+                                    forma aleatoria de una tómbola con bolas
+                                    numeradas del 1 al 50. </p>
+                                <b>¿Cuántos números diferentes pueden salir?</b>
+
+                                <div class="options">
+                                    <div class="option"><p>a) 20050</p></div>
+                                    <div class="option"><p>b) 210</p></div>
+                                    <div class="option" id="correcta"><p>c) 19600</p></div>
+                                    <div class="option"><p>d) Ninguna de las Anteriores</p></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="popup_bg" id="Tars_1">
+                    <div class="popup_tars" id="tars1">
+                        <div class="popup_bar">
+                            <div class="title">
+                                <p>Ajustes</p>
+                            </div>
+                            <div class="button" id="TarsBtt1">
+                                <img src="img/close.webp" alt="cerrar.img">
+                            </div>
+                        </div>
+
+                        <div class="popup_cont">
+                            <p id="titulo"><b>Creditos:</b></p>
+                            <p>Sleiter Silva - Programador Lider</p>
+                            <p>Noelia Hurtado - Diseño y Estructuras</p>
+                            <p>Eduardo Laboren - Diseño Web y Layout</p>
+                            <p>Pedro Montecé - Investigador</p>
+                            <p>José Freire - Investigador</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="popup_bg" id="Tars_2">
+                    <div class="popup_tars" id="tars1">
+                        <div class="popup_bar">
+                            <div class="title">
+                                <p>DENEGADO</p>
+                            </div>
+                            <div class="button" id="TarsBtt2">
+                                <img src="img/close.webp" alt="cerrar.img">
+                            </div>
+                        </div>
+
+                        <div class="popup_cont">
+                            <img src="img/close.webp" alt="">
+                            <p><b>[ACCESO NO CONCEDIDO]</b></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="popup_bg" id="Tars_3">
+                    <div class="popup_tars" id="tars1">
+                        <div class="popup_bar">
+                            <div class="title">
+                                <p>Ajustes</p>
+                            </div>
+                            <div class="button" id="TarsBtt3">
+                                <img src="img/close.webp" alt="cerrar.img">
+                            </div>
+                        </div>
+
+                        <div class="popup_cont">
+                            <p id="titulo"><b>Creditos:</b></p>
+                            <p>Sleiter Silva - Programador Lider</p>
+                            <p>Noelia Hurtado - Diseño y Estructuras</p>
+                            <p>Eduardo Laboren - Diseño Web y Layout</p>
+                            <p>Pedro Montecé - Investigador</p>
+                            <p>José Freire - Investigador</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="popup_bg" id="Tars_4">
+                    <div class="popup_tars" id="tars1">
+                        <div class="popup_bar">
+                            <div class="title">
+                                <p>VERIFICACION DE USUARIO</p>
+                            </div>
+                            <div class="button" id="TarsBtt4">
+                                <img src="img/close.webp" alt="cerrar.img">
+                            </div>
+                        </div>
+
+                        <div class="popup_cont">
+                            <h1>¿Ya Sabes lo Suficiente?</h1>
+                            <p>Ingresa la <b>Clave Secreta</b> para Descubrirlo</p>
+                            
+                            <input type="text" id="clave" maxlength="5" onkeypress="return event.charCode >= 48 && event.charCode <= 57" placeholder="Pista: El mas grande imperio">
+                            <br>
+                            <button onclick="ValidarClave()">[A C C E D E R]</button>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+
+            <div id="barra_tareas">
+                <div class="barra_icons">
+                    <div class="tarea" id="tarea1">
+                        <img src="img/configuracion.ico" alt="Opciones">
+                    </div>
+                    <div class="tarea" id="tarea2">
+                        <img src="img/carpeta.ico" alt="Carpeta">
+                    </div>
+                    <div class="tarea" id="tarea3">
+                        <img src="img/Apagar.ico" alt="Apagado">
+                    </div>
+                    <div class="tarea" id="tarea4">
+                        <img src="img/secreto.ico" alt="Secreto">
+                    </div>
+                    <div class="tarea" id="tarea5">
+                        <img src="img/mensajeria.ico" alt="Mensajeria">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="code.js"></script>
+
+</body>
+</html>
